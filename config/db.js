@@ -1,6 +1,7 @@
 var mongoose = require("mongoose");
 var models = require("../models/models");
 var Person = models.Person;
+var Thing = models.Thing;
 
 module.exports = {
     connect : connect,
@@ -30,7 +31,17 @@ function seed(cb){
         {name:"Curly"},
         {name:"Moe"}
     ];
+    var things = [
+        {name : "Rock"},
+        {name : "Paper"},
+        {name : "Scissors"}
+    ]
     Person.remove({}, function(){
-        Person.create(people, cb);
+        Thing.remove({}, function(){
+            Thing.create(things, function(){
+                Person.create(people, cb);
+            });
+        });
+
     });
 }

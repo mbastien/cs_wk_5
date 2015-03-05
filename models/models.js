@@ -5,6 +5,10 @@ var PersonSchema = new mongoose.Schema({
     name:String
 });
 
+var ThingSchema = new mongoose.Schema({
+    name:String
+});
+
 PersonSchema.statics.findOneByName = function(name, cb){
     this.findOne({name:name}, cb);
 };
@@ -18,7 +22,9 @@ PersonSchema.statics.findOneById = function(id, cb){
 };
 
 var Person = mongoose.model("Person", PersonSchema);
+var Thing = mongoose.model("Thing", ThingSchema);
 
 module.exports = {
-    Person: Person
+    Person: Person,
+    Thing: Thing
 };
