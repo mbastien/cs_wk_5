@@ -1,0 +1,22 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "in-class example week 5",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mbastien/cs_wk_5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbastien/cs_wk_5/issues"
+  },
+  "homepage": "https://github.com/mbastien/cs_wk_5",
+  "dependencies": {
+    "mongoose": "^3.8.24"
+  }
+}
