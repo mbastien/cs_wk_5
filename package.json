@@ -18,5 +18,8 @@
   "homepage": "https://github.com/mbastien/cs_wk_5",
   "dependencies": {
     "mongoose": "^3.8.24"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
   }
 }
